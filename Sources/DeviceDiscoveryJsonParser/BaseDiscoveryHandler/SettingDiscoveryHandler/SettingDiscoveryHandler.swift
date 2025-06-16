@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingDiscoveryHandler: BaseDiscoveryHandler {}
+public protocol SettingDiscoveryHandler: BaseDiscoveryHandler {}
 
 extension SettingDiscoveryHandler where GenericDeviceData: SettingsDeviceData {
     func fillDeviceSettings(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> [String: SettingDefinition] {

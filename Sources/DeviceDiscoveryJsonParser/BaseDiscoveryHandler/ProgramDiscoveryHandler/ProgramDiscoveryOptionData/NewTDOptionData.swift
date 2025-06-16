@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewTDOptionData: Codable {
+public struct NewTDOptionData: Codable {
     let programs: [String: NewProgram]
     let menu: [String: NewMenuItem]
     let mainModel: String

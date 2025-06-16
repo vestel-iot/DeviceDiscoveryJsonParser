@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewRefrigeratorData: Codable {
+public struct NewRefrigeratorData: Codable {
     let mainModel: String
     let status: [StatusDefinition]
     let settings: [String: SettingDefinition]

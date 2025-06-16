@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol BaseDiscoveryHandler: AnyObject {
+public protocol BaseDiscoveryHandler: AnyObject {
     associatedtype OptionData
-    associatedtype ErrorResponse
+    associatedtype ErrorResponsePlaceHolder
     associatedtype GenericDeviceData: DefaultNativeWGDeviceData
 
     static var shared: Self { get }
@@ -20,27 +20,8 @@ protocol BaseDiscoveryHandler: AnyObject {
     func getJson(
         uuid: String,
         onSuccess: @escaping (OptionData) -> Void,
-        onError: @escaping (ErrorResponse?) -> Void
+        onError: @escaping (ErrorResponsePlaceHolder?) -> Void
     )
-}
-
-extension BaseDiscoveryHandler {
-    func getJson(
-        uuid: String,
-        onSuccess: @escaping (OptionData) -> Void,
-        onError: @escaping (ErrorResponse?) -> Void
-    ) {
-//        SmartHomeRESTService.newGetDeviceDiscovery(uuid: uuid) {
-//            (result: NewDeviceDiscoveryResult<GenericDeviceData>?, error) in
-//            if let error = error {
-//                print("Get Settings: \(error.errors.first?.message ?? "")")
-//                onError(error)
-//            } else if let result = result {
-//                let data = self.map(json: result)
-//                onSuccess(data)
-//            }
-//        }
-    }
 }
 
 extension BaseDiscoveryHandler  {

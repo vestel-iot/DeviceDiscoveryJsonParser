@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - WM
-extension ProgramDiscoveryHandler where GenericDeviceData: IWMDeviceData, OptionData == NewWMOptionData {
+public extension ProgramDiscoveryHandler where GenericDeviceData: IWMDeviceData, OptionData == NewWMOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(
@@ -26,7 +26,7 @@ extension ProgramDiscoveryHandler where GenericDeviceData: IWMDeviceData, Option
 }
 
 //MARK: - WD
-extension ProgramDiscoveryHandler where GenericDeviceData: IWDDeviceData, OptionData == NewWDOptionData {
+public extension ProgramDiscoveryHandler where GenericDeviceData: IWDDeviceData, OptionData == NewWDOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(
@@ -43,7 +43,7 @@ extension ProgramDiscoveryHandler where GenericDeviceData: IWDDeviceData, Option
 }
 
 //MARK: - DW
-extension ProgramDiscoveryHandler where GenericDeviceData: IDWDeviceData, OptionData == NewDWOptionData {
+public extension ProgramDiscoveryHandler where GenericDeviceData: IDWDeviceData, OptionData == NewDWOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(
@@ -60,7 +60,7 @@ extension ProgramDiscoveryHandler where GenericDeviceData: IDWDeviceData, Option
 }
 
 //MARK: - OV
-extension ProgramDiscoveryHandler where GenericDeviceData: IOVDeviceData, OptionData == NewOVOptionData {
+public extension ProgramDiscoveryHandler where GenericDeviceData: IOVDeviceData, OptionData == NewOVOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(
@@ -77,7 +77,7 @@ extension ProgramDiscoveryHandler where GenericDeviceData: IOVDeviceData, Option
 }
 
 //MARK: - TD
-extension ProgramDiscoveryHandler where GenericDeviceData: ITDDeviceData, OptionData == NewTDOptionData {
+public extension ProgramDiscoveryHandler where GenericDeviceData: ITDDeviceData, OptionData == NewTDOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(programs: common.programs,
@@ -94,7 +94,7 @@ extension ProgramDiscoveryHandler where GenericDeviceData: ITDDeviceData, Option
 }
 
 //MARK: - AC
-extension SettingDiscoveryHandler where GenericDeviceData: IACDeviceData, OptionData == NewACOptionData {
+public extension SettingDiscoveryHandler where GenericDeviceData: IACDeviceData, OptionData == NewACOptionData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(mainModel: common.mainModel,
@@ -112,7 +112,7 @@ extension SettingDiscoveryHandler where GenericDeviceData: IACDeviceData, Option
 }
 
 //MARK: - RF
-extension SettingDiscoveryHandler where GenericDeviceData: IRFDeviceData, OptionData == NewRefrigeratorData {
+public extension SettingDiscoveryHandler where GenericDeviceData: IRFDeviceData, OptionData == NewRefrigeratorData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(mainModel: common.mainModel,
@@ -126,7 +126,7 @@ extension SettingDiscoveryHandler where GenericDeviceData: IRFDeviceData, Option
 }
 
 //MARK: - FD
-extension SettingDiscoveryHandler where GenericDeviceData: IFDDeviceData, OptionData == NewRefrigeratorData {
+public extension SettingDiscoveryHandler where GenericDeviceData: IFDDeviceData, OptionData == NewRefrigeratorData {
     func map(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> OptionData {
         let common = commonMappedData(json: json)
         return OptionData(mainModel: common.mainModel,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewACOptionData: Codable {
+public struct NewACOptionData: Codable {
     let mainModel: String
     let status: [StatusDefinition]
     let settings: [String: SettingDefinition]

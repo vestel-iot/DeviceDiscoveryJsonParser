@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewOVOptionData: Codable {
+public struct NewOVOptionData: Codable {
     let programs: [String: NewProgram]
     let menu: [String: NewMenuItem]
     let mainModel: String

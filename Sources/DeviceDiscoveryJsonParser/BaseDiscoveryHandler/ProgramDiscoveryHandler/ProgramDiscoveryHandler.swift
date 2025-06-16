@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProgramDiscoveryHandler: BaseDiscoveryHandler { }
+public protocol ProgramDiscoveryHandler: BaseDiscoveryHandler { }
 
 extension ProgramDiscoveryHandler where GenericDeviceData: ProgramOptionDeviceData {
     func fillOptionDataPrograms(json: NewDeviceDiscoveryResult<GenericDeviceData>) -> [String: NewProgram] {

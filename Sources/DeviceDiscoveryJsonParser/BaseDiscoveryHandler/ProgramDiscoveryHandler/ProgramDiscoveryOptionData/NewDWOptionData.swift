@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewDWOptionData: Codable {
+public struct NewDWOptionData: Codable {
     let programs: [String: NewProgram]
     let menu: [String: NewMenuItem]
     let mainModel: String

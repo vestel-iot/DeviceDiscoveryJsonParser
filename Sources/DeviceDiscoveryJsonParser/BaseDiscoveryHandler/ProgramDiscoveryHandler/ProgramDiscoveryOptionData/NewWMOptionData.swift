@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewWMOptionData: Codable {
+public struct NewWMOptionData: Codable {
     let programs: [String: NewProgram]
     let menu: [String: NewMenuItem]
     let mainModel: String
